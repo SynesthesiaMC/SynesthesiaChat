@@ -1,9 +1,0 @@
-name: SynesthesiaChat
-version: 1.0
-author: Rikitek4759
-main: services.synesthesiadev.synesthesia_chat.Main
-api-version: 1.8
-commands:
-  synchat:
-    description: Comando Principale
-    usage: /<command>
