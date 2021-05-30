@@ -1,4 +1,4 @@
-package services.synesthesiadev.synesthesia_chat.managers;
+package services.synesthesia.synesthesia_chat.managers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,8 +14,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitScheduler;
 
-import services.synesthesiadev.synesthesia_chat.Main;
-import services.synesthesiadev.synesthesia_chat.Utils;
+import services.synesthesia.synesthesia_chat.Main;
+import services.synesthesia.synesthesia_chat.Utils;
 
 public class ChatManager {
 

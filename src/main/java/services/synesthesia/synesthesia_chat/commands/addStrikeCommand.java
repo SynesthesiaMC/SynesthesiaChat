@@ -1,4 +1,4 @@
-package services.synesthesiadev.synesthesia_chat.commands;
+package services.synesthesia.synesthesia_chat.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -6,17 +6,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-import services.synesthesiadev.synesthesia_chat.Main;
-import services.synesthesiadev.synesthesia_chat.Utils;
-import services.synesthesiadev.synesthesia_chat.managers.ChatManager;
+import services.synesthesia.synesthesia_chat.Main;
+import services.synesthesia.synesthesia_chat.Utils;
 
-public class removeStrikeCommand implements CommandExecutor{
-	
+public class addStrikeCommand implements CommandExecutor {
+
 	private Main plugin;
 	private FileConfiguration config;
-	private ChatManager ChatManager;
+	private services.synesthesia.synesthesia_chat.managers.ChatManager ChatManager;
 	
-	public removeStrikeCommand(Main plugin) {
+	public addStrikeCommand(Main plugin) {
 		this.plugin = plugin;
 		this.config = this.plugin.getConfig();
 		this.ChatManager = this.plugin.getChatManager();
@@ -27,7 +26,7 @@ public class removeStrikeCommand implements CommandExecutor{
 
 		Player player = (Player) sender;
 
-		if (!(player.hasPermission("synchat.strikes.take"))) {
+		if (!(player.hasPermission("synchat.strikes.give"))) {
 			return true;
 		}
 
@@ -39,7 +38,7 @@ public class removeStrikeCommand implements CommandExecutor{
 			return true;
 		}
 		
-		if (args.length < 3 || !(args[0].equals("take"))) {
+		if (args.length < 3 || !(args[0].equals("give"))) {
 			return true;
 		}
 		
@@ -51,9 +50,9 @@ public class removeStrikeCommand implements CommandExecutor{
 			return true;
 		}
 		
-		this.ChatManager.removeStrike(target.getUniqueId(), Integer.parseInt(args[3]));
+		this.ChatManager.addStrike(target.getUniqueId(), Integer.parseInt(args[3]), false);
 		
 		return true;
 	}
-	
+
 }

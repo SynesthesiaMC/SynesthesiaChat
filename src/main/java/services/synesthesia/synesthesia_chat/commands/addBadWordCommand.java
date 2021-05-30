@@ -1,17 +1,16 @@
-package services.synesthesiadev.synesthesia_chat.commands;
+package services.synesthesia.synesthesia_chat.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import services.synesthesiadev.synesthesia_chat.Main;
-import services.synesthesiadev.synesthesia_chat.managers.ChatManager;
+import services.synesthesia.synesthesia_chat.Main;
 
 public class addBadWordCommand implements CommandExecutor{
 	
 	private Main plugin;
-	private ChatManager ChatManager;
+	private services.synesthesia.synesthesia_chat.managers.ChatManager ChatManager;
 	
 	public addBadWordCommand(Main plugin) {
 		this.plugin = plugin;

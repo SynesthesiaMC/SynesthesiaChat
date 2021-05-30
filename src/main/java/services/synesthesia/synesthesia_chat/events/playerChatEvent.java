@@ -1,4 +1,4 @@
-package services.synesthesiadev.synesthesia_chat.events;
+package services.synesthesia.synesthesia_chat.events;
 
 import java.util.List;
 
@@ -9,10 +9,10 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-import services.synesthesiadev.synesthesia_chat.managers.ChatManager;
+import services.synesthesia.synesthesia_chat.managers.ChatManager;
 
-import services.synesthesiadev.synesthesia_chat.Main;
-import services.synesthesiadev.synesthesia_chat.Utils;
+import services.synesthesia.synesthesia_chat.Main;
+import services.synesthesia.synesthesia_chat.Utils;
 
 public class playerChatEvent implements Listener {
 

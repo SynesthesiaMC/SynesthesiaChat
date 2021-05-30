@@ -2,29 +2,27 @@
 #           Synesthesia Chat by Rikitek4759            #
 ########################################################
 
-prefix: '&cSynChat &f>'
-
-######Plugin Configuration#######
+prefix: '&dSynesthesiaChat &f»'
 
 strikes:
   enabled: true
   strikes_needed: 3
   
 punishment:
-  command: 'tempmute %player% 1h bad word used'
+  command: 'tempmute %player% 1h bad word usage!'
 
 chat_cooldown: 5 #time in seconds
 
 messages:
   strike_alert: '%prefix% &cYou received a strike for using a bad word'
-  no_caps: '%prefix% &cDo not use caps'
+  no_caps: '%prefix% &cDon''t use caps'
   player_not_exist: '%prefix% &cThe selected player does not exist'
   no_strike_player: '%prefix% &cThe selected player does not have any strikes'
   strike_added: '%prefix% &fYou gave &c%player% &fa strike'
   strike_taken: '%prefix% &fYou took a strike from &c%player%'
   badword_added: '%prefix% &fYou added &c%word% &fto the Banned Word'
   badword_removed: '%prefix% &fYou removed &c%word% &ffrom the BannedWords'
-  cant_send_ip: '%prefix% &fYou cant send ips'
-  cant_send_url: '%prefix% &fYou cant send urls'
+  cant_send_ip: '%prefix% &fYou can''t send ips'
+  cant_send_url: '%prefix% &fYou can''t send urls'
   chat_cooldown: '%prefix% &fYou have to wait %time% to write again'
 

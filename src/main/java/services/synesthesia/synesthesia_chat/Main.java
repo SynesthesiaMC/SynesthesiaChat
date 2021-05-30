@@ -1,4 +1,4 @@
-package services.synesthesiadev.synesthesia_chat;
+package services.synesthesia.synesthesia_chat;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,9 +18,9 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import services.synesthesiadev.synesthesia_chat.commands.synchatCommand;
-import services.synesthesiadev.synesthesia_chat.events.playerChatEvent;
-import services.synesthesiadev.synesthesia_chat.managers.ChatManager;
+import services.synesthesia.synesthesia_chat.events.playerChatEvent;
+import services.synesthesia.synesthesia_chat.commands.synchatCommand;
+import services.synesthesia.synesthesia_chat.managers.ChatManager;
 
 public class Main extends JavaPlugin {
 

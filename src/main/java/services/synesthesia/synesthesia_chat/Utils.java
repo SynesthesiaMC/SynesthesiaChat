@@ -1,4 +1,4 @@
-package services.synesthesiadev.synesthesia_chat;
+package services.synesthesia.synesthesia_chat;
 
 import org.bukkit.ChatColor;
 
