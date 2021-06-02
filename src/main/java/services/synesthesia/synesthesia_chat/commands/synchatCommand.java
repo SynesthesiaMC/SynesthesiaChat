@@ -8,12 +8,12 @@ import org.bukkit.entity.Player;
 
 import services.synesthesia.synesthesia_chat.Main;
 import services.synesthesia.synesthesia_chat.Utils;
-import services.synesthesia.synesthesia_chat.managers.*;
+import services.synesthesia.synesthesia_chat.managers.ChatManager;
 
 public class synchatCommand implements CommandExecutor {
 
 	private Main plugin;
-	private services.synesthesia.synesthesia_chat.managers.ChatManager ChatManager;
+	private ChatManager ChatManager;
 	private FileConfiguration config;
 
 	public synchatCommand(Main plugin) {
