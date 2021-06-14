@@ -1,9 +1,14 @@
 ########################################################
-#           Synesthesia Chat by Rikitek4759            #
+#           Synesthesia Chat Configuration             #
+#                                                      #
+# By Rikitek4759                                       #
+#                                                      #
+# Made with love <3                                    #
 ########################################################
 
-prefix: '&dSynesthesiaChat &fÂ»'
-
+########################################################
+#           Punishment System Configuration            #
+########################################################
 strikes:
   enabled: true
   strikes_needed: 3
@@ -11,7 +16,24 @@ strikes:
 punishment:
   command: 'tempmute %player% 1h bad word usage!'
 
+########################################################
+#               Chat System Configuration              #
+########################################################
+
+#################Anti Flood#################
 chat_cooldown: 5 #time in seconds
+
+###############Ranks Prefixes###############
+ChatPrefixes:
+  enabled: true
+  prefixes:
+    - default: '&3Member &f»'
+    - vip: '&6Vip &f»'
+
+########################################################
+#               Messages Configuration                 #
+########################################################
+prefix: '&dSynesthesiaChat &f»'
 
 messages:
   strike_alert: '%prefix% &cYou received a strike for using a bad word'

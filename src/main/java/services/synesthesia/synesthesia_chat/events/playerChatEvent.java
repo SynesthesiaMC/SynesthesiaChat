@@ -9,6 +9,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
+import net.milkbowl.vault.chat.Chat;
 import services.synesthesia.synesthesia_chat.managers.ChatManager;
 
 import services.synesthesia.synesthesia_chat.Main;
@@ -20,18 +21,34 @@ public class playerChatEvent implements Listener {
 	private ChatManager ChatManager;
 	private List<String> badwords;
 	private FileConfiguration config;
+	private Chat chat;
 	
 	public playerChatEvent(Main plugin) {
 		this.plugin = plugin;
 		this.ChatManager = this.plugin.getChatManager();
 		this.config = this.plugin.getConfig();
+		this.chat = this.plugin.getChat();
 	}
 
 	@EventHandler(priority = EventPriority.LOWEST)
 	public void onPlayerMessage(AsyncPlayerChatEvent e) {
 		
 		Player player = e.getPlayer();
-
+		
+		String msg = e.getMessage();
+		
+		if(this.config.getBoolean("ChatPrefixes.enabled"))
+		for(String group : this.chat.getPlayerGroups(player)) {
+			String prefix = this.config.getString("ChatPrefixes.prefixes." + group );
+			if(prefix != null) {
+				msg = prefix + " " + msg;
+				msg = Utils.chat(msg);
+				e.setMessage(msg);
+			}
+		}
+		
+		e.setMessage(msg);
+		
 		if (player.hasPermission("synchat.bypass")) {
 			return;
 		}
